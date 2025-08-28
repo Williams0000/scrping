@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://codeavecjonathan.com/scraping/recette/"
+url = ""   #<-- lien du site
 
 
 def get_text_if_not_none(e):
