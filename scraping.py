@@ -3,13 +3,14 @@ from bs4 import BeautifulSoup
 
 url = ""   #<-- lien du site
 
+HEADERS = {} # user agent
 
 def get_text_if_not_none(e):
     if e:
         return e.text.strip()
     return None
 
-response = requests.get(url)
+response = requests.get(url, headers=HEADERS)
 response.encoding = response.apparent_encoding
 
 if response.status_code == 200:
